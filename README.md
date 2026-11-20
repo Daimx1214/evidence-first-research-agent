@@ -77,17 +77,28 @@ python -m pytest -q
 
 ## Example
 
-> **⚠ Paste your real live-run output here — DO NOT fabricate.**
-> The block below is a placeholder until the first live run with real keys.
-> Run `python src/agent.py "What are the current evidence-based benefits and risks of intermittent fasting?" --trace-file docs/trace.json --html reports/answer.html` and replace this section with the real answer, sources and trace.
+> **Offline stub example — NOT a live run.** The answer below is real output
+> of the agent pipeline run by `scripts/offline_stub_run.py` with fake
+> clients (no keys, no live APIs) — but every cited URL is a **real, openable
+> page** whose text supports the claim (verified 2026-11-20). It shows the
+> answer format, citation behaviour and confidence scoring. A real live run
+> still needs a Nebius key (blocked for Pakistan — see "Live evidence so far").
 
-**Question:** *(paste your real question after your first live run)*
+**Question:** What are the current evidence-based benefits and risks of intermittent fasting?
 
-**Answer (excerpt):** *(paste the real answer with [1], [2] citations)*
+**Answer (excerpt):**
+> Short answer: randomised trials report weight loss with intermittent fasting similar to continuous restriction, with headaches and fatigue in the first few days [1][2].
+>
+> - Weight loss was similar in the intermittent and continuous restriction groups after one year [1].
+> - Headaches and fatigue are common in the first few days of fasting [2].
+> - Long-term adherence is uncertain: hunger may limit adherence to intermittent restriction [1]. The sources do not cover outcomes beyond one year [1][3].
 
-**Sources:** `[1] … · [2] …`
+**Sources:**
+[1] Effect of intermittent versus continuous energy restriction on weight loss, maintenance and cardiometabolic risk: A randomized 1-year trial — https://www.sciencedirect.com/science/article/abs/pii/S0939475318301005
+[2] 9 Possible Side Effects of Intermittent Fasting — https://www.healthline.com/nutrition/intermittent-fasting-side-effects
+[3] The Effects of Continuous vs. Intermittent Caloric Restriction on Fat Loss: A Randomized Controlled Trial — https://pmc.ncbi.nlm.nih.gov/articles/PMC13258728/
 
-**Confidence:** *(real score from the run)* · **Trace:** see `docs/trace.json` (saved from the real run; `docs/trace.example.json` is only an offline stub example — see below).
+**Confidence:** 75/100 (high) — 3 usable sources, mean credibility 0.78, verification 2/2 claims supported, 3 sources cited, 0 long uncited lines · **Trace:** `docs/trace.example.json` (offline stub example — see below). The same run is saved as an HTML report with clickable citations: `reports/stub-answer.html` (generated locally; git-ignored).
 
 ### Example trace (offline stub — NOT a live run)
 
@@ -100,6 +111,7 @@ No live end-to-end run is possible: Nebius Token Factory signup does not support
 - **Tests:** 15/15 pytest tests pass, no API keys needed — verified in the main repo and again in a fresh clone (fresh venv, `pip install -r requirements.txt`, `python -m pytest -q` → `15 passed in 0.12s`, 2026-11-20).
 - **Setup from scratch works:** in the fresh clone, `python src/agent.py --help` exits 0, and running the agent with no keys exits 1 with the clean message `NEBIUS_API_KEY is not set (see .env.example).`
 - **Tavily (live):** free account `daimx1214@gmail.com`, Researcher plan, 1,000 credits/month, no card. A live Tavily search was verified 2026-11-20 18:20 PKT — query `"Nebius Token Factory"`, `search_depth="advanced"`, returned **3 results, scores ~0.82**. This proves the search/evidence half against the real API.
+- **Offline stub example (real citations):** `scripts/offline_stub_run.py` now cites real, openable pages (ScienceDirect 1-year RCT, Healthline side effects, PMC RCT); a run produces confidence 75/100 (high), 2/2 claims supported, and its output is shown in the Example section above. The failure case is also demonstrable offline: `scripts/offline_refusal_demo.py` prints INSUFFICIENT EVIDENCE and exits 2 when search returns nothing.
 - **Keys:** `.env` is prepared (git-ignored) with `TAVILY_API_KEY` set from the free Tavily account; `NEBIUS_API_KEY` is still a placeholder. No key value appears anywhere in the repo, README or traces.
 
 ## Failure / insufficient-evidence case
