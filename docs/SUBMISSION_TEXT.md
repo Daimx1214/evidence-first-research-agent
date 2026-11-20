@@ -11,8 +11,8 @@ Only ONE submission per team/individual.
 | Team name | EvidenceFirst |
 | Team captain | Daim Ali |
 | Captain email | daimx1214@gmail.com |
-| Public repository URL | TO ADD — public GitHub repo URL (create from the ODSC template first) |
-| Demo video URL | TO ADD — public/unlisted 2–3 min video link (must open without requesting access) |
+| Public repository URL | https://github.com/Daimx1214/evidence-first-research-agent |
+| Demo video URL | https://www.youtube.com/watch?v=hSF6UNs_zaM (Unlisted) |
 | Live app URL | Leave empty (no live app built) |
 | Write-up / report URL | Leave empty (README is the write-up) |
 | "Leave this field empty" | Leave EMPTY (spam trap — do not type anything) |

@@ -4,7 +4,7 @@
 
 **One-line pitch:** Ask a research question and get a short, claim-by-claim cited brief that admits conflicts and gaps — or refuses, with a clear reason, when the evidence is not there.
 
-- **Demo video (2–3 min):** [TO ADD — paste the public/unlisted video link here]
+- **Demo video (2–3 min):** https://www.youtube.com/watch?v=hSF6UNs_zaM (Unlisted; fallback draft — real tests, offline stub labelled as stub, live Tavily search; live end-to-end run still pending on a Nebius key)
 - **Team:** EvidenceFirst — Daim Ali (solo), daimx1214@gmail.com
 - **Model:** `MiniMaxAI/MiniMax-M3` on Nebius Token Factory · **Search:** Tavily (`search_depth="advanced"`, `max_results=5`)
 
