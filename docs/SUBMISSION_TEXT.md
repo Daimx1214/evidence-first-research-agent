@@ -24,4 +24,4 @@ Only ONE submission per team/individual.
 
 ## Before pressing Submit
 
-See `SUBMISSION_CHECKLIST.md` in the repo root and tick every box: repo Public from the template, README complete with a real live-run example, model name `MiniMaxAI/MiniMax-M3` in the README, demo video linked and checked in incognito, no API key anywhere in the repo/README/video, honeypot field empty, checkbox ticked.
+See `SUBMISSION_CHECKLIST.md` in the repo root and tick every box: repo Public from the template, README complete except the live-run example (no live run was possible — Nebius Token Factory does not support Pakistan, confirmed by Nebius Support 2026-11-20; the README documents the verified facts instead), model name `MiniMaxAI/MiniMax-M3` in the README, demo video linked and checked in incognito, no API key anywhere in the repo/README/video, honeypot field empty, checkbox ticked. Submitted 2026-11-20 19:40 PKT — confirmation: "Project submitted. EvidenceFirst is now in the judging queue."

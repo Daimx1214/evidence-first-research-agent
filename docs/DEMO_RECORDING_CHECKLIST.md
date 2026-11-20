@@ -27,5 +27,5 @@ before uploading.
 
 1. Watch the whole video once: no key, password or `.env` content visible anywhere.
 2. Upload as **public or unlisted** (must open in incognito without login or an access request).
-3. Paste the link into the README (`Demo video` line) and into `docs/SUBMISSION_TEXT.md` (Demo video URL), replacing the `TO ADD` placeholders.
+3. Paste the link into the README (`Demo video` line) and into `docs/SUBMISSION_TEXT.md` (Demo video URL). (Done 2026-11-20: https://www.youtube.com/watch?v=hSF6UNs_zaM — no `TO ADD` placeholders remain.)
 4. Paste the real answer, sources and confidence score from this run into the README Example section, and the real trace into `docs/trace.json`.
