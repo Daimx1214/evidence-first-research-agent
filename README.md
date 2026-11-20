@@ -4,7 +4,7 @@
 
 **One-line pitch:** Ask a research question and get a short, claim-by-claim cited brief that admits conflicts and gaps — or refuses, with a clear reason, when the evidence is not there.
 
-- **Demo video (2–3 min):** https://www.youtube.com/watch?v=hSF6UNs_zaM (Unlisted; fallback draft — real tests, offline stub labelled as stub, live Tavily search; live end-to-end run still pending on a Nebius key)
+- **Demo video (2–3 min):** https://www.youtube.com/watch?v=hSF6UNs_zaM (Unlisted; fallback draft — real tests, offline stub labelled as stub, live Tavily search; live end-to-end run not possible — Nebius Token Factory does not support Pakistan, confirmed by Nebius Support 2026-11-20)
 - **Team:** EvidenceFirst — Daim Ali (solo), daimx1214@gmail.com
 - **Model:** `MiniMaxAI/MiniMax-M3` on Nebius Token Factory · **Search:** Tavily (`search_depth="advanced"`, `max_results=5`)
 
@@ -50,7 +50,7 @@ flowchart LR
 ## Setup
 
 ```bash
-git clone <repo-url>
+git clone https://github.com/Daimx1214/evidence-first-research-agent
 cd evidence-first-research-agent
 python -m venv .venv && source .venv/bin/activate   # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
@@ -95,7 +95,7 @@ python -m pytest -q
 
 ## Live evidence so far (verified facts only — updated 2026-11-20)
 
-No live end-to-end run has happened yet: it needs a Nebius Token Factory key, which is still pending (Builder Program application under review since 2026-11-20 11:05 PKT). What **has** been verified:
+No live end-to-end run is possible: Nebius Token Factory signup does not support Pakistan — the country is not in the residence list, even with promo credits — and no bank card is available. Nebius Support confirmed this on 2026-11-20 20:19 PKT (ticket AISTUDIOSUP-2754): Pakistan is unsupported including with promo credits, and the Builders application does not remove the country restriction. The ODSC organizers were contacted for guidance via the Luma event page on 2026-11-20. What **has** been verified:
 
 - **Tests:** 15/15 pytest tests pass, no API keys needed — verified in the main repo and again in a fresh clone (fresh venv, `pip install -r requirements.txt`, `python -m pytest -q` → `15 passed in 0.12s`, 2026-11-20).
 - **Setup from scratch works:** in the fresh clone, `python src/agent.py --help` exits 0, and running the agent with no keys exits 1 with the clean message `NEBIUS_API_KEY is not set (see .env.example).`
@@ -154,7 +154,7 @@ evidence-first-research-agent/
 ├── docs/
 │   ├── DEMO_SCRIPT.md        # 2–3 min demo video script with timestamps
 │   ├── DEMO_RECORDING_CHECKLIST.md  # exact commands/order for recording the demo
-│   ├── SUBMISSION_TEXT.md    # exact submission-form text (repo + video URLs to add)
+│   ├── SUBMISSION_TEXT.md    # exact submission-form text (repo + video URLs included)
 │   └── trace.example.json    # EXAMPLE trace from the offline stub run (labelled, not a live run)
 ├── requirements.txt    # openai, tavily-python, python-dotenv, pytest
 ├── .env.example        # NEBIUS_API_KEY, TAVILY_API_KEY, optional base URL / model
