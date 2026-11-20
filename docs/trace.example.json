@@ -2,7 +2,7 @@
   "note": "EXAMPLE ONLY \u2014 produced by scripts/offline_stub_run.py with fake LLM/Tavily clients. NOT a live run.",
   "trace": [
     {
-      "t": 1795154765.1,
+      "t": 1795199369.18,
       "step": "plan",
       "queries": [
         "intermittent fasting benefits evidence",
@@ -11,57 +11,57 @@
       ]
     },
     {
-      "t": 1795154765.1,
+      "t": 1795199369.18,
       "step": "tavily",
       "query": "intermittent fasting benefits evidence",
       "results": 3
     },
     {
-      "t": 1795154765.1,
+      "t": 1795199369.18,
       "step": "tavily",
       "query": "intermittent fasting risks side effects",
       "results": 3
     },
     {
-      "t": 1795154765.1,
+      "t": 1795199369.18,
       "step": "tavily",
       "query": "intermittent fasting randomised trial 2024",
       "results": 3
     },
     {
-      "t": 1795154765.1,
+      "t": 1795199369.18,
       "step": "extract",
       "source": 1,
       "chars": 1999
     },
     {
-      "t": 1795154765.1,
+      "t": 1795199369.18,
       "step": "extract",
       "source": 2,
       "chars": 1999
     },
     {
-      "t": 1795154765.1,
+      "t": 1795199369.18,
       "step": "extract",
       "source": 3,
       "chars": 1999
     },
     {
-      "t": 1795154765.1,
+      "t": 1795199369.18,
       "step": "evidence",
       "kept": 3,
       "domains": 3,
       "high_credibility": 2,
-      "low_credibility": 1
+      "low_credibility": 0
     },
     {
-      "t": 1795154765.1,
+      "t": 1795199369.18,
       "step": "verify",
       "invalid_citations_removed": [],
       "uncited_lines": 0
     },
     {
-      "t": 1795154765.1,
+      "t": 1795199369.18,
       "step": "verify_llm",
       "status": "verified",
       "supported": 2,
@@ -70,20 +70,20 @@
       "unsupported_claims": 0
     },
     {
-      "t": 1795154765.1,
+      "t": 1795199369.18,
       "step": "confidence",
-      "score": 74,
-      "level": "medium"
+      "score": 75,
+      "level": "high"
     }
   ],
   "confidence": {
-    "score": 74,
-    "level": "medium",
+    "score": 75,
+    "level": "high",
     "reasons": [
       "3 usable source(s)",
-      "mean credibility 0.68",
+      "mean credibility 0.78",
       "verification: 2/2 claims supported",
-      "2 source(s) cited, 0 long uncited line(s)"
+      "3 source(s) cited, 0 long uncited line(s)"
     ]
   },
   "verification": {
