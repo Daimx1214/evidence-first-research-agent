@@ -1,0 +1,98 @@
+{
+  "note": "EXAMPLE ONLY \u2014 produced by scripts/offline_stub_run.py with fake LLM/Tavily clients. NOT a live run.",
+  "trace": [
+    {
+      "t": 1795154765.1,
+      "step": "plan",
+      "queries": [
+        "intermittent fasting benefits evidence",
+        "intermittent fasting risks side effects",
+        "intermittent fasting randomised trial 2024"
+      ]
+    },
+    {
+      "t": 1795154765.1,
+      "step": "tavily",
+      "query": "intermittent fasting benefits evidence",
+      "results": 3
+    },
+    {
+      "t": 1795154765.1,
+      "step": "tavily",
+      "query": "intermittent fasting risks side effects",
+      "results": 3
+    },
+    {
+      "t": 1795154765.1,
+      "step": "tavily",
+      "query": "intermittent fasting randomised trial 2024",
+      "results": 3
+    },
+    {
+      "t": 1795154765.1,
+      "step": "extract",
+      "source": 1,
+      "chars": 1999
+    },
+    {
+      "t": 1795154765.1,
+      "step": "extract",
+      "source": 2,
+      "chars": 1999
+    },
+    {
+      "t": 1795154765.1,
+      "step": "extract",
+      "source": 3,
+      "chars": 1999
+    },
+    {
+      "t": 1795154765.1,
+      "step": "evidence",
+      "kept": 3,
+      "domains": 3,
+      "high_credibility": 2,
+      "low_credibility": 1
+    },
+    {
+      "t": 1795154765.1,
+      "step": "verify",
+      "invalid_citations_removed": [],
+      "uncited_lines": 0
+    },
+    {
+      "t": 1795154765.1,
+      "step": "verify_llm",
+      "status": "verified",
+      "supported": 2,
+      "unsupported": 0,
+      "total_checked": 2,
+      "unsupported_claims": 0
+    },
+    {
+      "t": 1795154765.1,
+      "step": "confidence",
+      "score": 74,
+      "level": "medium"
+    }
+  ],
+  "confidence": {
+    "score": 74,
+    "level": "medium",
+    "reasons": [
+      "3 usable source(s)",
+      "mean credibility 0.68",
+      "verification: 2/2 claims supported",
+      "2 source(s) cited, 0 long uncited line(s)"
+    ]
+  },
+  "verification": {
+    "status": "verified",
+    "supported": 2,
+    "unsupported": 0,
+    "total_checked": 2,
+    "unsupported_claims": [],
+    "invalid_citations_removed": [],
+    "uncited_lines": 0
+  }
+}
