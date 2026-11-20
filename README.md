@@ -4,7 +4,7 @@
 
 **One-line pitch:** Ask a research question and get a short, claim-by-claim cited brief that admits conflicts and gaps — or refuses, with a clear reason, when the evidence is not there.
 
-- **Demo video (2–3 min):** https://www.youtube.com/watch?v=hSF6UNs_zaM (Unlisted; fallback draft — real tests, offline stub labelled as stub, live Tavily search; live end-to-end run not possible — Nebius Token Factory does not support Pakistan, confirmed by Nebius Support 2026-11-20)
+- **Demo video (2–3 min):** https://www.youtube.com/watch?v=ihLlTv2TSsI (Unlisted; improved version — failure case with exit code 2, citations against real pages, 15/15 tests, live Tavily search, offline stub labelled as stub; live end-to-end run not possible — Nebius Token Factory does not support Pakistan, confirmed by Nebius Support 2026-11-20)
 - **Team:** EvidenceFirst — Daim Ali (solo), daimx1214@gmail.com
 - **Model:** `MiniMaxAI/MiniMax-M3` on Nebius Token Factory · **Search:** Tavily (`search_depth="advanced"`, `max_results=5`)
 
