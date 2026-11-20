@@ -44,7 +44,7 @@ Only ONE submission per team/individual.
 - [ ] Team name: **EvidenceFirst**
 - [ ] Team captain: **Daim Ali**
 - [ ] Captain email: **daimx1214@gmail.com**
-- [ ] "What did you build?": pasted from README / the draft in `docs/DEMO_SCRIPT.md`
+- [] "What did you build?": pasted from `docs/SUBMISSION_TEXT.md` (project document §C6)
 - [ ] Public repository URL filled
 - [ ] Demo video URL filled
 - [ ] Live app URL / Write-up URL: left empty (no live app built)
