@@ -153,6 +153,8 @@ evidence-first-research-agent/
 │   └── offline_stub_run.py   # offline stub run: proves the pipeline end to end without keys
 ├── docs/
 │   ├── DEMO_SCRIPT.md        # 2–3 min demo video script with timestamps
+│   ├── DEMO_RECORDING_CHECKLIST.md  # exact commands/order for recording the demo
+│   ├── SUBMISSION_TEXT.md    # exact submission-form text (repo + video URLs to add)
 │   └── trace.example.json    # EXAMPLE trace from the offline stub run (labelled, not a live run)
 ├── requirements.txt    # openai, tavily-python, python-dotenv, pytest
 ├── .env.example        # NEBIUS_API_KEY, TAVILY_API_KEY, optional base URL / model
