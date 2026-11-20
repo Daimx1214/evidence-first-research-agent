@@ -40,37 +40,45 @@ class FakeLLM:
                            '"intermittent fasting randomised trial 2024"]')
         if "verify a draft" in sys_msg:
             return FakeMsg(json.dumps({"checks": [
-                {"claim": "Trials report modest weight loss",
+                {"claim": "Weight loss was similar in both groups",
                  "source_ids": [1], "supported": True,
                  "note": "stated in source"},
-                {"claim": "Risks include headaches in some people",
+                {"claim": "Headaches and fatigue are common early on",
                  "source_ids": [2], "supported": True,
                  "note": "stated in source"}]}))
         return FakeMsg(
-            "Short answer: randomised trials report modest weight loss with "
-            "intermittent fasting, with some side effects [1][2].\n"
+            "Short answer: randomised trials report weight loss with intermittent "
+            "fasting similar to continuous restriction, with headaches and fatigue "
+            "in the first few days [1][2].\n"
             "Key findings\n"
-            "- Trials report modest weight loss versus continuous restriction [1].\n"
-            "- Some people report headaches and fatigue early on [2].\n"
+            "- Weight loss was similar in the intermittent and continuous restriction "
+            "groups after one year [1].\n"
+            "- Headaches and fatigue are common in the first few days of fasting [2].\n"
             "Conflicts and gaps\n"
-            "Sources disagree on long-term adherence; no long-term trial in the sources [1][2].")
+            "Long-term adherence is uncertain: hunger may limit adherence to "
+            "intermittent restriction [1]. The sources do not cover outcomes "
+            "beyond one year [1][3].")
 
 
 class FakeSearch:
     def search(self, **kw):
+        # REAL pages (verified 2026-11-20): every URL below opens to a real
+        # page whose text supports the stub answer's claims. Scores are
+        # fixture values chosen so the ranking is [1] trial, [2] side
+        # effects, [3] second trial (combined relevance + credibility).
         return {"results": [
-            {"url": "https://www.nih.gov/news/fasting-trial",
-             "title": "NIH — Intermittent fasting trial results",
-             "content": "Randomised trials report modest weight loss with intermittent fasting. " * 3,
+            {"url": "https://www.sciencedirect.com/science/article/abs/pii/S0939475318301005",
+             "title": "Effect of intermittent versus continuous energy restriction on weight loss, maintenance and cardiometabolic risk: A randomized 1-year trial",
+             "content": "Weight loss was similar among participants in the intermittent and continuous energy restriction groups (8.0 kg versus 9.0 kg; p = 0.6). Both intermittent and continuous energy restriction resulted in similar weight loss, maintenance and improvements in cardiovascular risk factors after one year. However, feelings of hunger may be more pronounced during intermittent energy restriction.",
              "score": 0.92},
-            {"url": "https://www.nature.com/articles/fasting-review",
-             "title": "Nature — Fasting review",
-             "content": "Some people report headaches and fatigue early on during fasting. " * 3,
+            {"url": "https://www.healthline.com/nutrition/intermittent-fasting-side-effects",
+             "title": "9 Possible Side Effects of Intermittent Fasting",
+             "content": "Common side effects of intermittent fasting include hunger, headaches, fatigue, irritability, digestive issues like bloating and diarrhea, and bad breath. Many of these symptoms tend to improve after the first few days as your body adjusts. Headaches are a possible side effect of any type of fasting. They typically occur during the first few days of a fasting period.",
              "score": 0.88},
-            {"url": "https://www.bbc.com/news/health-fasting",
-             "title": "BBC — Fasting: what the evidence says",
-             "content": "Sources disagree on long-term adherence to fasting regimes. " * 3,
-             "score": 0.81},
+            {"url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13258728/",
+             "title": "The Effects of Continuous vs. Intermittent Caloric Restriction on Fat Loss: A Randomized Controlled Trial",
+             "content": "Both dietary strategies effectively reduced fat mass in females with obesity; between-group differences were negligible. Fat mass significantly declined in both groups. Future studies should investigate this potential association in larger, adequately powered trials before any conclusions can be drawn.",
+             "score": 0.55},
         ]}
 
     def extract(self, **kw):
